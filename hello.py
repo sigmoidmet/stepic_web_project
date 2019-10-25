@@ -3,7 +3,7 @@ def application(environ, start_response):
     headers = [
         ('Content-Type', 'text/plain')
         ]
-    body = '\n'.join(environ['QUERY_STRING'].split('&'))
+    body = '\n'.join(environ['QUERY_STRING'].split('&')).encode()
     start_response(status, headers)
     return [body]
   
