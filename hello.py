@@ -3,7 +3,7 @@ def application(environ, start_response):
     headers = [
         ('Content-Type', 'text/plain')
         ]
-    body = '\n'.join(eviron['QUERRY_STRING'].split('&'))
+    body = '\n'.join(environ['QUERRY_STRING'].split('&'))
     start_response(status, headers)
     return [body]
   
