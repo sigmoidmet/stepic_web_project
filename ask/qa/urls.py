@@ -1,11 +1,11 @@
 from qa.views import test
 
-urlpatterns = patterns('qa.views',
-                        url('login/', test, name='login'),
-                        url('signup/', test, name='signup'),
-                        url('question/<int:id>/', test, name='question'),
-                        url('ask/', test, name='ask'),
-                        url('popular/', test, name='popular'),
-                        url('new/', test, name='new'),
-                        url('', test, name='home'),
-                        )
+urlpatterns = patterns('qa.views',                                              
+   url(r'^$', 'test'),                                                              
+   url(r'^login/.*$', 'test', name='login'),                                    
+   url(r'^signup/.*', 'test', name='signup'),                                   
+   url(r'^question/(?P<id>[0-9]+)/$', 'test', name='question'),                 
+   url(r'^ask/.*', 'test', name='ask'),                                         
+   url(r'^popular/.*', 'test', name='popular'),                                 
+   url(r'^new/.*', 'test', name='new'),                                         
+)    
