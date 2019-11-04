@@ -1,8 +1,4 @@
-virtualenv -p python3 myvenv
-source myvenv/bin/activate
-pip install --upgrade pip
-pip install django
-pip install gunicorn
+
 sudo rm /etc/nginx/sites-enabled/default
 sudo ln -s /home/box/web/etc/nginx.conf  /etc/nginx/sites-enabled/test.conf
 sudo /etc/init.d/nginx restart
