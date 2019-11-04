@@ -2,4 +2,4 @@ sudo rm /etc/nginx/sites-enabled/default
 sudo ln -s /home/box/web/etc/nginx.conf  /etc/nginx/sites-enabled/test.conf
 sudo /etc/init.d/nginx restart
 gunicorn -b 0.0.0.0:8080 --pythonpath hello:app &     
-gunicorn -b 0.0.0.0:8000 --pythonpath ask ask.wsgi:application & 
+gunicorn -b 0.0.0.0:8000 --pythonpath ask.wsgi:application & 
